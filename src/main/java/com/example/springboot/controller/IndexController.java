@@ -75,7 +75,7 @@ public class IndexController {
             result = "hello welcome admin";
             response.setState(true);
         } else {
-            result = "oh sorry user name or password is wrong";
+            result = "oh sorry user name or password is wrong!";
             response.setState(false);
         }
         response.setResult(result);
