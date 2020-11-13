@@ -68,6 +68,7 @@ public class IndexController {
         }
     }
 
+    //方法
     private String login4Return(String name, String pwd) {
         String result;
         BaseResponse response = new BaseResponse();
