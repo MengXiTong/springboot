@@ -34,7 +34,7 @@ public class IndexController {
     @GetMapping(value = "/login/{name}&{pwd}")
     public String login(@PathVariable String name, @PathVariable String pwd) {
         if (name.equals("admin") && pwd.equals("123")) {
-            return "hello welcome admin";
+            return "hello welcome admin1";
         } else {
             return "oh sorry user name or password is wrong";
         }
