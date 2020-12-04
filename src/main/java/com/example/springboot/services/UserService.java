@@ -3,6 +3,7 @@ package com.example.springboot.services;
 import com.example.springboot.entity.User;
 import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Service;
@@ -25,6 +26,12 @@ public class UserService {
         String sql = "select * from user";
         List<User> users = jdbcTemplate.query(sql, new MyRowMapper());
         return new Gson().toJson(users);
+    }
+
+    public List<User> findAll() {
+        String sql = "select * from user";
+        //使用BeanPropertyRowMapper的注意：字段名字一样或者驼峰式与下划线式对应
+        return jdbcTemplate.query(sql, new BeanPropertyRowMapper<User>(User.class));
     }
 }
 
