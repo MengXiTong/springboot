@@ -1,6 +1,6 @@
 package com.example.springboot.services;
 
-import com.example.springboot.Dao.JPABookRepository;
+import com.example.springboot.dao.JPABookRepository;
 import com.example.springboot.entity.JPABook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

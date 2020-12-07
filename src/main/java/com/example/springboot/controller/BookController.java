@@ -24,7 +24,7 @@ public class BookController {
     }
 
     @RequestMapping(value = "/query", method = RequestMethod.GET)
-    public String getUserList() {
+    public String getBookList() {
         return new Gson().toJson(jpaBookService.findAll());
     }
 }
